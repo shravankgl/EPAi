@@ -21,7 +21,7 @@ Assignment 2 (500)
 
 
 |Q|         Function          |                 Implementation                                |
-|-| :-----------------------: | :----------------------------------------------------------: |
+|-| :----------------------- | :---------------------------------------------------------- |
 |1.1| fib_series  |```lambda n: reduce(lambda x, _: x+[x[-1]+x[-2]], range(n-2), [0, 1])```|
 |1.2| isFibonacci |  ```lambda x: True if x in source else False```  |
 |1.3| filterFibonacciInList  |  ```list(filter(lambda x: True if x in source else False,l))```     |
