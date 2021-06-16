@@ -17,7 +17,7 @@ Assignment 2 (500)
 6. Write the above again from scratch where KA can be changed to DL, and 1000/9999 ranges can be provided. Now use a partial function such that 1000/9999 are hardcoded, but KA can be provided
 
 
-##Solution
+## Solution
 
 
 |Q|         Function          |                 Implementation                                |
