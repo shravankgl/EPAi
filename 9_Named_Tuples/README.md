@@ -174,3 +174,32 @@ Calculate the value the stock market started at,the highest value during the day
 |15|test_stock_open_high_close_values | test to make sure high is greater than or equal to open or close|
 |16|test_calculate_stock_market | test stock market open, high, close is correct|
 
+
+### Testcase results
+```
+================================================= test session starts =================================================
+platform win32 -- Python 3.8.3, pytest-6.2.4, py-1.10.0, pluggy-0.13.1 -- c:\python38\python.exe
+cachedir: .pytest_cache
+rootdir: D:\TSAI\EPAi\Session9_NamedTuple
+plugins: Faker-8.10.0
+collected 16 items
+
+test_session9.py::test_profile_fields_available PASSED                                                           [  6%]
+test_session9.py::test_profile_fields_not_empty PASSED                                                           [ 12%]
+test_session9.py::test_profile_doc_string_not_empty PASSED                                                       [ 18%]
+test_session9.py::test_profile_generation PASSED                                                                 [ 25%]
+test_session9.py::test_validate_datatype_of_count_generate_random_profile PASSED                                 [ 31%]
+test_session9.py::test_convert_dictionary_to_namedtuple PASSED                                                   [ 37%]
+test_session9.py::test_get_age PASSED                                                                            [ 43%]
+test_session9.py::test_validate_datatype_of_days_get_age PASSED                                                  [ 50%]
+test_session9.py::test_demograph PASSED                                                                          [ 56%]
+test_session9.py::test_dict_namedtuple_performance PASSED                                                        [ 62%]
+test_session9.py::test_stock_fields_not_empty PASSED                                                             [ 68%]
+test_session9.py::test_stock_doc_string_not_empty PASSED                                                         [ 75%]
+test_session9.py::test_stock_generation PASSED                                                                   [ 81%]
+test_session9.py::test_validate_datatype_of_count_generate_random_stock PASSED                                   [ 87%]
+test_session9.py::test_stock_open_high_close_values PASSED                                                       [ 93%]
+test_session9.py::test_calculate_stock_market PASSED                                                             [100%]
+
+=========================================== 16 passed in 134.72s (0:02:14) ============================================
+```
