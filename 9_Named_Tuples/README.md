@@ -155,3 +155,22 @@ Calculate the value the stock market started at,the highest value during the day
 ```
 
 #### **Testcases**
+|Sl No| Testcase|Description |
+|:--- | :-- | :-- | 
+|1|test_profile_fields_available | test for all keys in Faker dictionary matches with fields profile namedtuple|
+|2|test_profile_fields_not_empty| test none of the fields in Faker profile is empty|
+|3|test_profile_doc_string_not_empty | test none of the doc string in profile is empty|
+|4|test_profile_generation | test number of profiles created is equal to count value|
+|5|test_validate_datatype_of_count_generate_random_profile |validate the datatype of count is int |
+|6|test_convert_dictionary_to_namedtuple | test if datatype of converted list is profile|
+|7|test_get_age | test get_age function|
+|8|test_validate_datatype_of_days_get_age | validate the datatype of days is int|
+|9|test_demograph | test the demograph calculation|
+|10|test_dict_namedtuple_performance | test to compare the performance of dictonary and namedtuple|
+|11|test_stock_fields_not_empty | test none of the fields in stock namedtuple is empty|
+|12|test_stock_doc_string_not_empty | test none of the doc string in stock is empty|
+|13|test_stock_generation | test number of stocks created is equal to count value|
+|14|test_validate_datatype_of_count_generate_random_stock | validate the datatype of count is int|
+|15|test_stock_open_high_close_values | test to make sure high is greater than or equal to open or close|
+|16|test_calculate_stock_market | test stock market open, high, close is correct|
+
