@@ -1,6 +1,6 @@
 from numbers import Number
 import math
-from RegularConvexPolygon import RegularConvexPolygon
+from regularConvexPolygon import RegularConvexPolygon
 
 class PolygonSequence:
     '''Creates a sequence of Regular Strictly Convex Polygons'''
