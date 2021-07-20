@@ -135,7 +135,7 @@ area = 0.5*n*s*a
 
 #### 7) Comparators
 ```
-def __eq__(self,  other:'RegularConvexPolygon')->bool:
+    def __eq__(self,  other:'RegularConvexPolygon')->bool:
         '''check equality of two polygons'''
         self.__validate_polygon(other)
         return (self.__edges==other.__edges and self.__radius == other.__radius)
