@@ -163,42 +163,43 @@ area = 0.5*n*s*a
 ```
 
 ### Part 2: Polygon Sequence
+#### 1) Attributes
+Regular convex polygon has 2 attributes 
 ```
-from numbers import Number
-import math
-from RegularConvexPolygon import RegularConvexPolygon
-
-class PolygonSequence:
-    '''Creates a sequence of Regular Strictly Convex Polygons'''
-    
-    def __init__(self, edges:int, radius:Number)->None:
-      '''Polygon sequence initializer with attributes edges and radius'''
-
-      self.edges = edges
-      self.radius = radius
-
+a) edges: number of edges of max polygon
+   datatype: int
+b) radius: circumradius of all polygons
+   datatype: any number (int, float, decimal)
+```
+#### 2) Validators
+This class has 2 validators
+##### 2.1) edge validator
+a) validates if datatype is int else raises TypeError
+b) validates value is greater than or equal to 3 else raises ValueError
+```
     def __validate_edges(self, edges:int)->None:
         '''validates datatype and value of edges'''
         if type(edges) != int:
             raise TypeError(f"'edges' must be int not {edges.__class__.__name__} ")
         if edges < 3:
             raise ValueError(f"'edges' should be greater than or equal to 3")
-
+```
+##### 2.2) radius validator
+a) validates if datatype is any number else raises TypeError
+To do number validation number module is used
+b) validates value is greater than or equal to 0 else raises ValueError
+```
     def __validate_radius(self, radius:Number)->None:
         '''validates datatype and value of radius'''
         if not isinstance(5, Number):
             raise TypeError(f"'radius' must be a number(int/float/decimal) not {radius.__class__.__name__} ")
         if radius < 0:
             raise ValueError(f"'edges' should be greater than or equal to 3")
+```
 
-    def __repr__(self)->str:
-        '''PolygonSequence representation'''
-        return (f'A PolygonSequence from 3 to {self.edges} edges of radius {self.radius}')
-
-    def __str__(self)->str:
-        '''PolygonSequence string representation'''
-        return (f'PolygonSequence: edges = (3 to {self.edges}), radius = {self.radius}')
-
+#### 3) Getters and Setters
+private attributes __edges and __radius are wrapped with getters and setters
+```
     @property
     def edges(self)->int:
         '''Max edges of PolygonSequence'''
@@ -220,12 +221,40 @@ class PolygonSequence:
         '''set circumradius of polygon sequence'''
         self.__validate_radius(radius)
         self.__radius = radius
+```
 
+#### 4) Constructor/Initializer
+```
+    def __init__(self, edges:int, radius:Number)->None:
+      '''Polygon sequence initializer with attributes edges and radius'''
+
+      self.edges = edges
+      self.radius = radius
+```
+
+#### 5) Representation
+```
+    def __repr__(self)->str:
+        '''PolygonSequence representation'''
+        return (f'A PolygonSequence from 3 to {self.edges} edges of radius {self.radius}')
+
+    def __str__(self)->str:
+        '''PolygonSequence string representation'''
+        return (f'PolygonSequence: edges = (3 to {self.edges}), radius = {self.radius}')
+```
+
+#### 6) Properties
+##### 6.1) Private property area:perimeter ratio
+```
     def __area_perimeter_ratio(self,edges:int)->Number:
       '''returns the area: perimeter ratio of polygon'''
       polygon = RegularConvexPolygon(edges,__ratio)
       return polygon.area/polygon.perimeter
+```
 
+##### 6.2) max efficiency
+Returns the polygon with the highest area: perimeter ratio
+```
     def max_efficiency(self)->str:
         '''returns the polygon with the highest area: perimeter ratio'''
         max_efficiency_value = __area_perimeter_ratio(3)
@@ -237,6 +266,10 @@ class PolygonSequence:
                 max_efficiency_polygon = i
         return f"Max efficiency poygon is RegularConvexPolygon({max_efficiency_polygon},{__radius}) with area: perimeter ratio {max_efficiency_value}"
 
+```
+##### 6.3) Indexing and slicing
+__getitem__ is overridden
+```
     def __getitem__(self, args)->RegularConvexPolygon:
         '''returns specified sequence'''    
         if isinstance(args, int):
