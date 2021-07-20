@@ -4,11 +4,12 @@
 ### Part1: Regular Convex Polygon
 #### 1) Attributes
 Regular convex polygon has 2 attributes 
+```
 a) edges: number of edges in the polygon
    datatype: int
 b) radius: circumradius of the polygon
    datatype: any number (int, float, decimal)
-   
+```
 #### 2) Validators
 This class has 3 validators
 ##### 2.1) edge validator
