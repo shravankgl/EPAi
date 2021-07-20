@@ -86,25 +86,25 @@ class RegularConvexPolygon:
 
     def __eq__(self,  other:'RegularConvexPolygon')->bool:
         '''check equality of two polygons'''
-        __validate_polygon(other)
+        self.__validate_polygon(other)
         return (self.__edges==other.__edges and self.__radius == other.__radius)
 
     def __gt__(self, other:'RegularConvexPolygon')->bool:
         '''check no of edges of current polygon is greater than no of edges of other polygons'''
-        __validate_polygon(other)
+        self.__validate_polygon(other)
         return self.__edges > other.__edges
 
     def __ge__(self, other:'RegularConvexPolygon')->bool:
         '''check no of edges of current polygon is greater than or equal to no of edges of other polygons'''
-        __validate_polygon(other)
+        self.__validate_polygon(other)
         return self.__edges >= other.__edges
 
     def __lt__(self, other:'RegularConvexPolygon')->bool:
         '''check no of edges of current polygon is less than no of edges of other polygons'''
-        __validate_polygon(other)
+        self.__validate_polygon(other)
         return self.__edges < other.__edges
 
     def __le__(self, other:'RegularConvexPolygon')->bool:
         '''check no of edges of current polygon is less than or equal to no of edges of other polygons'''
-        __validate_polygon(other)
+        self.__validate_polygon(other)
         return self.__edges <= other.__edges
