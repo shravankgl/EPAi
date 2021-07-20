@@ -71,7 +71,7 @@ class PolygonSequence:
                 max_efficiency_polygon = i
         return f"Max efficiency poygon is RegularConvexPolygon({max_efficiency_polygon},{__radius}) with area: perimeter ratio {max_efficiency_value}"
 
-    def __getitem__(self, args)->RegularConvexPolygon:
+    def __getitem__(self, args):
         '''returns specified sequence'''    
         if isinstance(args, int):
             if args < 0:
